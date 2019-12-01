@@ -143,14 +143,14 @@ class User extends MY_Controller {
 		$where = array('id' => $id);
 		if (!$this->user_model->check_exists($where)) {
 			$this->session->set_flashdata('message_fail', 'user không tồn tại');
-			redirect(user_url('user'));
+			redirect(admin_url('user'));
 		}
 		if ($this->user_model->delete($id)) {
 			$this->session->set_flashdata('message_success', 'Xóa user thành công');
 		}else{
 			$this->session->set_flashdata('message_fail', 'Xóa user thất bại');
 		}
-		redirect(user_url('user'));
+		redirect(admin_url('user'));
 	}
 	public function deldetail()
 	{

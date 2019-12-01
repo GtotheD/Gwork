@@ -34,4 +34,10 @@ class Home extends MY_Controller {
 		$this->data['temp']='site/home/index.php';
 		$this->load->view('site/layout',$this->data);
 	}
+
+	public function intro()
+	{
+		$this->data['temp']='site/home/intro';
+		$this->load->view('site/layoutsub',$this->data);
+	}
 }

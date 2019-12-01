@@ -6,16 +6,6 @@
 		<div class="row">
 			<nav class="navbar navbar-info re-navbar" >
 			  <div class="container-fluid re-container-fluid">
-			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			      	<a class="navbar-brand" href="#">--- Menu ---</a>
-			    </div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse re-navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav">
@@ -23,19 +13,8 @@
 
 			        <li><a href="<?php echo base_url('moi'); ?>">Mới</a></li>
 			        <li><a href="<?php echo base_url('ban-chay'); ?>">Bán chạy</a></li>
-			        <li class="dropdown">
-			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Thời trang<span class="caret"></span></a>
-			          <ul class="dropdown-menu" id="re-dropdown-menu">
-			          <?php foreach ($catalog as $value)
-			           {
-			           		$name = covert_vi_to_en($value->name);
-	  						$name = strtolower($name);
-			            ?>
-			          	<li><a style="color: #337ab7;padding: 10px 20px;" href="<?php echo base_url($name.'-c'.$value->id); ?>"><?php echo $value->name; ?></a></li>
-			          <?php } ?>
-			          </ul>
-			        </li>
 			        <li><a href="<?php echo base_url('khuyen-mai'); ?>">Khuyến mại</a></li>
+			        <li><a href="<?php echo base_url('gioi-thieu'); ?>">Giới thiệu</a></li>
 			       </ul>
 			      <ul class="nav navbar-nav navbar-right">
 			        <?php $this->load->view('site/cart/cart_sh'); ?>

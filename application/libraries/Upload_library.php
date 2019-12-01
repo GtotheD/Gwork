@@ -2,10 +2,12 @@
 class Upload_library
 {
 	protected $CI;
+
 	function __construct()
 	{
 		$this->CI =& get_instance();
 	}
+
 	function upload($upload_path='',$image='')
 	{
 		$config = $this->config($upload_path);
@@ -16,6 +18,7 @@ class Upload_library
 		$image_link = $data_img['file_name'];
 		return $image_link;
 	}
+
 	function upload_file($upload_path='',$list_image='')
 	{
 		$config = $this->config($upload_path);
@@ -41,11 +44,12 @@ class Upload_library
         }
         return $image_list;
 	}
+	
 	function config($upload_path='')
 	{
 		$config = array();
 		$config['upload_path'] = $upload_path;
-		$config['allowed_types'] = 'gif|jpg|png';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg';
 		$config['max_size']      = '1200';
 		$config['max_width']     = '1200';
 		$config['max_height']    = '1200';

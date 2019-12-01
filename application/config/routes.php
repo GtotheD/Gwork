@@ -55,6 +55,7 @@ $route['dang-ky'] = 'user/register';
 $route['ban-chay'] = 'product/hot';
 $route['moi'] = 'product/news';
 $route['khuyen-mai'] = 'product/discount';
+$route['gioi-thieu'] = 'home/intro';
 $route['(:any)-c(:num)'] = 'product/catalog/$2';
 $route['(:any)-p(:num)'] = 'product/view/$2';
 $route['default_controller'] = 'home';

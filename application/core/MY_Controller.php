@@ -18,7 +18,7 @@ class MY_Controller extends CI_Controller {
 			default:
 				$this->load->model('catalog_model');
 				$input = array();
-				$input['where'] = array('parent_id' => '1');
+				$input['where'] = array('parent_id' => '0');
 				$input['order'] = array('sort_order', 'ASC');
 				$catalog = $this->catalog_model->get_list($input);
 				foreach ($catalog as $value) {

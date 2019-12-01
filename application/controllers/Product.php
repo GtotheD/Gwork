@@ -250,9 +250,7 @@ class Product extends MY_Controller {
 		$this->load->view('site/layoutsub',$this->data);
 	}
 	public function raty()
-	{
-
-		
+	{		
 		$id = $this->input->post('id');
 		$product = $this->product_model->get_info($id);
 		if (!$product) {

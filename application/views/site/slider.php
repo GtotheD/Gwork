@@ -1,28 +1,27 @@
 <div class="row">
 			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearpadding">
-				<!-- <li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Thời trang<span class="caret"></span></a>
-					<ul class="dropdown-menu" id="re-dropdown-menu">
-					<?php foreach ($catalog as $value)
-					{
+				<div class="panel panel-info">
+					<div class="panel-body" style="padding:0px">
+						<div class="list-group">
+						<?php foreach ($catalog as $value)
+						{
 							$name = covert_vi_to_en($value->name);
 							$name = strtolower($name);
-					?>
-						<li><a style="color: #337ab7;padding: 10px 20px;" href="<?php echo base_url($name.'-c'.$value->id); ?>"><?php echo $value->name; ?></a></li>
-					<?php } ?>
-					</ul>
-				</li> -->
-				<div class="w3-sidebar w3-bar-block">
-					<a href="#" class="w3-bar-item w3-button">Link 1</a>
-					<a href="#" class="w3-bar-item w3-button">Link 2</a>
-					<div class="w3-dropdown-hover">
-					<button class="w3-button">Dropdown <i class="fa fa-caret-down"></i></button>
-					<div class="w3-dropdown-content w3-bar-block">
-					  <a href="#" class="w3-bar-item w3-button">Link</a>
-					  <a href="#" class="w3-bar-item w3-button">Link</a>
+						?>
+							<div class="list-group">
+								<a href="<?php echo base_url($name.'-c'.$value->id); ?>" class="list-group-item active">
+							    <?php echo $value->name; ?>
+							  	</a>
+								<?php foreach ($value->sub as $val) { 
+									$namesub = covert_vi_to_en($val->name);
+									$namesub = strtolower($namesub);
+									?>
+									<a href="<?php echo base_url($namesub.'-c'.$val->id); ?>" class="list-group-item"><?php echo $val->name; ?></a>
+								<?php } ?>
+							</div>
+						<?php } ?>
+						</div>
 					</div>
-					</div>
-					<a href="#" class="w3-bar-item w3-button">Link 3</a>
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 clearpadding">				
