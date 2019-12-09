@@ -3,7 +3,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 clearpadding">
 		<ol class="breadcrumb">
 		  <li><a href="<?php echo base_url(); ?>"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Trang chủ</a></li>
-		  <li><a href="<?php echo base_url('catalog/'.$catalog_product->id); ?>"><?php echo $catalog_product->name; ?></a></li>
+		  <li><a href="<?php echo base_url('product/catalog/'.$catalog_product->id); ?>"><?php echo $catalog_product->name; ?></a></li>
 		  <li class="active"><?php echo $product->name; ?></li>
 		</ol>
 
