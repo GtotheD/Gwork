@@ -2,25 +2,25 @@
 			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 clearpadding">
 				<div class="panel panel-info">
 					<div class="panel-body" style="padding:0px">
-						<div class="list-group">
 						<?php foreach ($catalog as $value)
 						{
 							$name = covert_vi_to_en($value->name);
 							$name = strtolower($name);
 						?>
-							<div class="list-group">
-								<a href="<?php echo base_url($name.'-c'.$value->id); ?>" class="list-group-item active">
-							    <?php echo $value->name; ?>
-							  	</a>
-								<?php foreach ($value->sub as $val) { 
-									$namesub = covert_vi_to_en($val->name);
-									$namesub = strtolower($namesub);
-									?>
-									<a href="<?php echo base_url($namesub.'-c'.$val->id); ?>" class="list-group-item"><?php echo $val->name; ?></a>
-								<?php } ?>
-							</div>
+                        <div class="list-group" id="main-menu">
+                            <a href="<?php echo base_url($name.'-c'.$value->id); ?>" class="list-group-item active">
+                            <?php echo $value->name; ?>
+                            </a>
+							<?php foreach ($value->sub as $val) { 
+								$namesub = covert_vi_to_en($val->name);
+								$namesub = strtolower($namesub);
+								?>                                
+                            <div class="list-group" id="sub-menu" style="display: none">
+								<a href="<?php echo base_url($namesub.'-c'.$val->id); ?>" class="list-group-item"><?php echo $val->name; ?></a>
+                            </div>
+							<?php } ?>                            
+                        </div>
 						<?php } ?>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -33,7 +33,7 @@
 				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 				  </ol>
           <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
+          <div class="carousel-inner" role="listbox" style="height: 314px">
             <?php foreach ($slider as $value) { ?>
             <div class="item <?php if ($value->sort_order=='1') {
                 echo 'active';

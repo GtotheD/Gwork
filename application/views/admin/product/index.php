@@ -58,6 +58,7 @@
 									<th></th>
 									<th class="text-center">ID</th>
 									<th>Tên sản phẩm</th>
+									<th>Hình ảnh</th>
 									<th>Danh mục</th>
 									<th>Giá</th>		
 									<th>Hành động</th>
@@ -68,8 +69,8 @@
 									<tr>
 										<td style="vertical-align: middle"><input type="checkbox" name="checkbox[]" value="<?php echo $value->id; ?>"  /></td>
 										<td style="vertical-align: middle;text-align: center;"><strong><?php echo $value->id; ?></strong></td>
-										<td><img src="<?php echo base_url(); ?>upload/product/<?php echo $value->image_link; ?>" alt="" style="width: 50px;float:left;margin-right: 10px;"><strong><?php echo $value->name; ?></strong>
-										<p style="font-size: 12px;margin-top: 4px;">View: <?php echo $value->view; ?> <span> | Đã bán :<?php echo $value->buyed; ?></span></p>
+										<td><strong><?php echo $value->name; ?></strong></td>
+										<td><img src="<?php echo base_url(); ?>upload/product/<?php echo $value->image_link; ?>" alt="" style="width: 50px;float:left;margin-right: 10px;">
 										</td>
 										<td style="vertical-align: middle"><strong ><?php echo $value->namecatalog; ?></strong></td>
 										<td style="vertical-align: middle">

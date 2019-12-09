@@ -16,7 +16,6 @@ class Product extends MY_Controller {
 	}
 	public function index()
 	{
-
 		$message_success = $this->session->flashdata('message_success');
 		$this->data['message_success'] = $message_success;
 

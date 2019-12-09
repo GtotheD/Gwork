@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo public_url('site/'); ?>bootstrap/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo public_url('site/'); ?>css/style.css">
 	<script type="text/javascript" src="<?php echo public_url('js/raty/jquery.raty.min.js') ?>"></script>
+  <script src="<?php echo public_url(); ?>js/jquery.js" type="text/javascript">
 	<script type="text/javascript">
       $(function() {
          $.fn.raty.defaults.path = "<?php echo public_url('js/raty/img'); ?>";

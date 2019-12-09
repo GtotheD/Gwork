@@ -206,10 +206,3 @@ p {
     text-indent: 30px;
 }
 
-#mainmenu {
-  position: relative;
-}
-
-#submenu {
-  position: absolute;
-}

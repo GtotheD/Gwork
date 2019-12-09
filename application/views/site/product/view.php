@@ -80,7 +80,7 @@
                 </div>
 		  	</div>
 		  	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-		  		<h1 style="font-size: 25px;text-transform:uppercase;color: red;font-weight:bold;"><?php $product->name; ?></h1>
+		  		<h1 style="font-size: 25px;text-transform:uppercase;color: red;font-weight:bold;"><?= $product->name; ?></h1>
 		  		<p><?php echo $product->content; ?></p>
 		  		<?php 
 		  			if ($product->discount > 0) {
