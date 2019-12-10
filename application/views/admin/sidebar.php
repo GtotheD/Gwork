@@ -16,5 +16,4 @@
 		<li role="presentation" class="divider"></li>
 		
 	</ul>
-	<div class="attribution">Template by <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">GoO</a><br/><a href="http://www.glyphs.co" style="color: #333;">Icons by GoO</a></div>
 </div><!--/.sidebar-->
