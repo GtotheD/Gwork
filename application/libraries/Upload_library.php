@@ -49,10 +49,10 @@ class Upload_library
 	{
 		$config = array();
 		$config['upload_path'] = $upload_path;
-		$config['allowed_types'] = 'gif|jpg|png|jpeg';
-		$config['max_size']      = '1600';
-		$config['max_width']     = '1600';
-		$config['max_height']    = '1600';
+		$config['allowed_types'] = 'gif|jpg|png|jpeg|HEIC';
+		$config['max_size']      = '5000';
+		$config['max_width']     = '3000';
+		$config['max_height']    = '3000';
 		return $config;
 	}
 }
