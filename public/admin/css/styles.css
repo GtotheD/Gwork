@@ -394,7 +394,7 @@ a.bg-danger:hover {
 	border-bottom-right-radius: 4px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
 	.widget-right {
 	width: 100%;
 	margin: 0;

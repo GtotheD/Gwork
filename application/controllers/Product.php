@@ -211,7 +211,6 @@ class Product extends MY_Controller {
 	}
 	public function search()
 	{
-		
 		$catalog_id = $this->input->post('catalog_id');
 		$price_from = $this->input->post('price_from');
 		$price_to = $this->input->post('price_to');
@@ -221,9 +220,9 @@ class Product extends MY_Controller {
 		$this->data['catalog_id'] = $catalog_id;
 		$input = array();
 		
-
 		$list = $this->catalog_model->get_info($catalog_id);
-		if ($list->parent_id == '1') {
+		//var_dump($list);die('zxczx');
+		if ($list->parent_id == '0') {
 			$inputt=array();
 			$inputt['where'] = array('parent_id' => $list->id);
 			$list_child = $this->catalog_model->get_list($inputt);
