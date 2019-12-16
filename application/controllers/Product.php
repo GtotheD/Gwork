@@ -65,7 +65,7 @@ class Product extends MY_Controller {
 			redirect(base_url());
 		}
 		$input = array();
-		if ($catalog->parent_id == '1') {
+		if ($catalog->parent_id == '0') {
 			$input_cat = array();
 			$input_cat['where'] = array('parent_id' => $catalog->id);
 			$input_cat['order'] = array('sort_order', 'ASC');
@@ -221,7 +221,7 @@ class Product extends MY_Controller {
 		$input = array();
 		
 		$list = $this->catalog_model->get_info($catalog_id);
-		//var_dump($list);die('zxczx');
+
 		if ($list->parent_id == '0') {
 			$inputt=array();
 			$inputt['where'] = array('parent_id' => $list->id);

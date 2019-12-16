@@ -87,7 +87,8 @@ class Catalog extends MY_Controller {
 		}
 
 		$input = array();
-		$input['where'] = array('parent_id <' => '2');
+		$input['where'] = array('parent_id <' => '1');
+		$input['order'] = array('sort_order','ASC');
 		$list = $this->catalog_model->get_list($input);
 		$this->data['list']= $list;
 

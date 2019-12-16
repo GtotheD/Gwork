@@ -5,11 +5,11 @@ $(document).ready(function(){
 	// 			});
 	// 			return false;
 	// });
-    $('#main-menu').hover(function() {
-        $(" #main-menu #sub-menu").css('display', 'block');
+    $('div#main-menu').hover(function() {
+        $(this).children().css('display', 'block');
     },
     function() {
-        $(" #main-menu #sub-menu").css('display', 'none');
+        $("#main-menu #sub-menu").css('display', 'none');
     }
     );
 });

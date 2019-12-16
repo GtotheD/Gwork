@@ -7,11 +7,9 @@ class Home extends MY_Controller {
 	{
 		$this->load->model('slider_model');
 		$input = array();
-		$input['order'] = array('sort_order', 'DESC');
+		$input['order'] = array('sort_order', 'ASC');
 		$slider = $this->slider_model->get_list($input);
 		$this->data['slider']=$slider;
-
-		
 		
 		$this->load->model('product_model');
 		$input = array();
