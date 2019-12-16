@@ -212,7 +212,7 @@ class Product extends MY_Controller {
 	protected function list_catalog()
 	{
 		$input = array();
-		$input['where'] = array('parent_id' => '1');
+		$input['where'] = array('parent_id' => '0');
 		$input['order'] = array('sort_order' , 'asc');
 		$catalog = $this->catalog_model->get_list($input);
 		foreach ($catalog as $value) {

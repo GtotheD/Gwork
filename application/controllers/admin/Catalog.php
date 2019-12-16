@@ -29,7 +29,7 @@ class Catalog extends MY_Controller {
 	public function add()
 	{
 		$input = array();
-		$input['where'] = array('parent_id <' => '2');
+		$input['where'] = array('parent_id <' => '1');
 		$list = $this->catalog_model->get_list($input);
 		$this->data['list']= $list;
 

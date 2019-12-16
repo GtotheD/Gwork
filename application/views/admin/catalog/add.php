@@ -33,7 +33,6 @@
 				    <div class="col-sm-5">
 				        <select class="form-control" name="parent_id">
 						  <option value='0'>Menu gốc</option>
-						  <option value='1'>Thời trang</option>
 						  <?php foreach ($list as $value) { 
 						  	if ($value->parent_id>0) { ?>
 						  		<option value="<?php echo $value->id; ?>" <?php if(set_value('parent_id')== $value->id) echo 'selected'; ?>>&nbsp;&nbsp;&nbsp;<?php echo $value->name; ?></option>

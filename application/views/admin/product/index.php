@@ -65,11 +65,11 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($product as $value) { ?>
+								<?php foreach ($product as $value) {?>
 									<tr>
 										<td style="vertical-align: middle"><input type="checkbox" name="checkbox[]" value="<?php echo $value->id; ?>"  /></td>
 										<td style="vertical-align: middle;text-align: center;"><strong><?php echo $value->id; ?></strong></td>
-										<td><strong><?php echo $value->name; ?></strong></td>
+										<td style="vertical-align: middle;"><strong><?php echo $value->name; ?></strong></td>
 										<td><img src="<?php echo base_url(); ?>upload/product/<?php echo $value->image_link; ?>" alt="" style="width: 50px;float:left;margin-right: 10px;">
 										</td>
 										<td style="vertical-align: middle"><strong ><?php echo $value->namecatalog; ?></strong></td>
